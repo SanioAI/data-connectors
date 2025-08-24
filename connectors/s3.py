@@ -5,7 +5,6 @@ import pandas as pd
 from datetime import datetime
 from typing import Any, Dict, Iterator, Optional
 from connectors.base import DataConnector
-import ipdb
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("s3_connector")
@@ -48,7 +47,6 @@ class S3SinkConnector(DataConnector):
             self, input_data: Optional[Any] = None
     ) -> Iterator[Dict[str, Any]]:
         """Write input data to S3"""
-        ipdb.set_trace()
         if not input_data:
             logger.warning("No input data provided to S3 sink")
             return
