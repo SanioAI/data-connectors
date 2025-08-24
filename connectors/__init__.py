@@ -1,4 +1,9 @@
-from postgresql import PostgreSQLSourceConnector
-from s3 import S3SinkConnector
+from connectors.base import DataConnector
+from connectors.postgresql import PostgreSQLSourceConnector
+from connectors.s3 import S3SinkConnector
 
-__all__ = ['PostgreSQLSourceConnector', 'S3SinkConnector']
+__all__ = [
+    'DataConnector',
+    'PostgreSQLSourceConnector', 
+    'S3SinkConnector'
+]

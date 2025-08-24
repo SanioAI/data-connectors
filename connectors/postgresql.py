@@ -3,7 +3,7 @@ from typing import Any, Dict, Iterator, Optional
 
 import psycopg2
 
-from base import DataConnector
+from connectors.base import DataConnector
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("postgres_connector")
